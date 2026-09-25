@@ -340,7 +340,21 @@
           <h2 class="h2 reveal-up">CONTATO</h2>
           <div class="contact__grid">
             <a class="cta" href="https://instagram.com/rodrigo.hidro" target="_blank" rel="noopener">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="5" width="38" height="38" rx="11"/><circle cx="24" cy="24" r="9"/><circle cx="35" cy="13" r="1.8" class="fill"/></svg>
+              <svg class="ig" viewBox="0 0 48 48" aria-hidden="true">
+                <defs>
+                  <radialGradient id="igGrad" cx="30%" cy="107%" r="150%">
+                    <stop offset="0" stop-color="#FDF497"/>
+                    <stop offset=".05" stop-color="#FDF497"/>
+                    <stop offset=".45" stop-color="#FD5949"/>
+                    <stop offset=".6" stop-color="#D6249F"/>
+                    <stop offset=".9" stop-color="#285AEB"/>
+                  </radialGradient>
+                </defs>
+                <rect width="48" height="48" rx="12" fill="url(#igGrad)"/>
+                <rect x="10" y="10" width="28" height="28" rx="8.5" fill="none" stroke="#fff" stroke-width="3"/>
+                <circle cx="24" cy="24" r="6.6" fill="none" stroke="#fff" stroke-width="3"/>
+                <circle cx="31.6" cy="16.4" r="2" fill="#fff"/>
+              </svg>
               <span class="cta__main">@rodrigo.hidro</span>
               <span class="cta__sub">Instagram</span>
             </a>
