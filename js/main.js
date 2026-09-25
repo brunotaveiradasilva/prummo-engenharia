@@ -669,28 +669,6 @@
   });
 
   /* ------------------------------------------------------------------------
-     CITAÇÕES: forma desenhada + linhas deslizando, tudo no scroll
-     ------------------------------------------------------------------------ */
-  $$('.quote').forEach(q => {
-    const paths = prepDraw($$('.quote__shape path', q));
-    const tl = gsap.timeline({
-      scrollTrigger: { trigger: q, start: 'top 75%', end: 'center 45%', scrub: 0.8 }
-    });
-    tl.to(paths, { strokeDashoffset: 0, ease: 'none', stagger: 0.15, duration: 1 }, 0)
-      .from($('.l1', q), { xPercent: -25, opacity: 0, ease: 'power2.out', duration: 0.8 }, 0.1)
-      .from($('.l2', q), { xPercent: 25, opacity: 0, ease: 'power2.out', duration: 0.8 }, 0.35);
-
-    gsap.to($('.quote__shape', q), {
-      rotate: 8, yPercent: -12, opacity: 0.35, ease: 'none',
-      scrollTrigger: { trigger: q, start: 'center 40%', end: 'bottom top', scrub: true }
-    });
-    gsap.to($('.quote__text', q), {
-      yPercent: -40, ease: 'none',
-      scrollTrigger: { trigger: q, start: 'center center', end: 'bottom top', scrub: true }
-    });
-  });
-
-  /* ------------------------------------------------------------------------
      SOBRE
      ------------------------------------------------------------------------ */
   gsap.fromTo('#sobre', { clipPath: 'inset(7% 5% 0% 5% round 40px)' }, {

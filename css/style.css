@@ -24,7 +24,6 @@
 
   --f-head: "Exo 2", system-ui, sans-serif;
   --f-body: "Open Sans", system-ui, sans-serif;
-  --f-quote: "Oswald", "Exo 2", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, monospace;
 
   --gutter: clamp(16px, 5vw, 72px);
@@ -343,49 +342,6 @@ body.on-light .topbar__section { color: var(--navy-700); }
   animation: cue 1.8s var(--ease) infinite;
 }
 @keyframes cue { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(14px); opacity: 0; } 100% { opacity: 0; } }
-
-/* ==========================================================================
-   CITAÇÕES (interlúdios entre seções)
-   ========================================================================== */
-.quote {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  --accent: var(--gold);
-  background: radial-gradient(ellipse at 50% 50%, var(--navy-800), var(--navy-900) 80%);
-}
-.quote[data-accent="blue"] { --accent: var(--blue); }
-.quote[data-accent="orange"] { --accent: var(--orange); }
-.quote[data-accent="green"] { --accent: var(--green); }
-.quote__shape {
-  grid-area: 1 / 1;
-  position: relative;
-  z-index: 1;
-  height: min(62vh, 520px);
-  width: auto;
-  overflow: visible;
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 7;
-  stroke-linejoin: miter;
-  filter: drop-shadow(0 0 22px color-mix(in srgb, var(--accent) 35%, transparent));
-}
-.quote__text {
-  grid-area: 1 / 1;
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  padding: 0 var(--gutter);
-  font: 600 clamp(30px, 6vw, 88px)/1.04 var(--f-quote);
-  white-space: nowrap;
-  letter-spacing: .005em;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  text-shadow: 0 6px 40px rgba(4, 16, 34, .8);
-}
-.quote__text .l1 { align-self: flex-start; margin-left: 12%; }
-.quote__text .l2 { align-self: flex-end; margin-right: 6%; color: var(--accent); }
 
 /* ==========================================================================
    SOBRE (painel cinza do PDF)
@@ -817,9 +773,6 @@ a.cta:hover svg .fill { fill: var(--gold); }
   .topbar { top: 14px; left: 14px; }
   .topbar__logo { width: 36px; height: 36px; }
 
-  .quote__text .l1, .quote__text .l2 { margin: 0; }
-  .quote__text { gap: 30vh; }
-  .quote { min-height: 90vh; }
 
   .about .container { padding-right: calc(var(--gutter) + 36px); }
   .about__band { width: 40px; }
