@@ -719,7 +719,7 @@
     gsap.timeline({ scrollTrigger: { trigger: card, start: 'top 88%' } })
       .from(card, { y: 80, opacity: 0, duration: 1, ease: 'expo.out', delay: isMobile() ? 0 : i * 0.12 })
       .to(icon, { strokeDashoffset: 0, duration: 0.9, ease: 'power2.inOut', stagger: 0.08 }, '-=.6')
-      .fromTo($('.brush', card), { '--brush': 0 }, { '--brush': 1, duration: 0.6, ease: 'power3.out' }, '-=.7')
+      .fromTo($('h3', card), { '--line': 0 }, { '--line': 1, duration: 0.6, ease: 'power3.out' }, '-=.7')
       .from($$('li', card), { x: -20, opacity: 0, duration: 0.5, stagger: 0.06, ease: 'power2.out' }, '-=.4');
   });
 
