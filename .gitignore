@@ -1,0 +1,6 @@
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
