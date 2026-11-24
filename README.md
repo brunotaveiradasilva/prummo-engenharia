@@ -4,7 +4,7 @@ Site de apresentação da Prummo Engenharia, escritório de projetos hidrossanit
 
 **[▶ Abrir o site](https://brunotaveiradasilva.github.io/prummo-engenharia/)**
 
-![Página inicial](docs/screenshots/inicio.png)
+![Página inicial](docs/screenshots/inicio.jpg)
 
 ## Seções
 
